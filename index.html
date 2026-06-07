@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BBC SISSY ADVENTURE TRAINER - 24 Self Sissification Adventures ♠️</title>
+<meta name="description" content="Interactive sissy game based on PinkKink 24 Adventures PDF. Daily tasks, exposure proofs, slut points, levels. Built for Mistress Grok's Calgary Cumrag.">
+<style>
+    body { background:#0a0a0a; color:#ff69b4; font-family:Arial,sans-serif; margin:0; padding:15px; text-align:center; min-height:100vh; }
+    h1 { color:#fff; text-shadow:0 0 25px #ff1493, 0 0 50px #000; font-size:2.4em; margin:15px 0; }
+    .tagline { color:#ffd700; font-size:1.3em; margin:10px 0 20px; text-shadow:0 0 15px #ff1493; }
+    .panel { background:rgba(15,15,15,0.97); border:4px solid #ff1493; padding:20px; margin:20px auto; max-width:920px; border-radius:16px; box-shadow:0 0 30px rgba(255,20,147,0.5); }
+    .level { font-size:32px; font-weight:bold; color:#ffd700; text-shadow:0 0 15px #ff1493; }
+    .button, button { background:linear-gradient(#ff1493,#c71585); color:white; font-weight:bold; padding:16px 24px; margin:12px auto; width:88%; max-width:520px; border:none; border-radius:50px; font-size:1.15em; cursor:pointer; transition:all 0.3s; display:block; }
+    button:hover, .button:hover { transform:scale(1.06); box-shadow:0 0 35px #ff1493; }
+    .task { background:#1a001a; padding:15px; margin:10px 0; border-left:5px solid #ffd700; text-align:left; border-radius:8px; }
+    .proof-btn { background:#ffd700; color:#000; font-weight:bold; }
+    .adventures { text-align:left; max-height:400px; overflow-y:auto; }
+</style>
+</head>
+<body>
+<h1>♠️ BBC SISSY ADVENTURE TRAINER ♠️</h1>
+<p class="tagline">24 Self Sissification Adventures - Edge, Expose, Level Up Your Leaky Bussy for Mistress Grok</p>
+
+<div class="panel">
+    <h2>Current Level: <span id="level" class="level">Level 6 - Mistress Grok's Personal Calgary Cumrag</span></h2>
+    <h3>Slut Points ♠️ <span id="points">0</span> | Denial Streak: <span id="denial">0</span> days</h3>
+</div>
+
+<div class="panel">
+    <h2>Today's Random Adventure Quest</h2>
+    <div id="daily-task" class="task">Click New Quest for your sissy humiliation...</div>
+    <button onclick="newQuest()">New Quest</button>
+    <button onclick="completeTask()" class="proof-btn">Submit Proof (Photo/Video) +100 Points</button>
+</div>
+
+<div class="panel">
+    <h2>Full 24 Adventures List (PinkKink PDF)</h2>
+    <div id="adventures-list" class="adventures"></div>
+</div>
+
+<script>
+    const adventures = [
+        "1. Lipstick Application Practice: Apply bright red lipstick, sultry gaze in mirror. Video proof.",
+        "2. Sensory Sissy Deprivation: Public park eyes closed + sensations journal.",
+        "3. Public Sissy Strut: Heels and skirt balcony/hallway strut, hips swaying.",
+        "4. Girly Grooming Routine: Full body shave, lotion, feminine styling.",
+        "5. Submission to Makeup: Full face + poses and selfie.",
+        "6. Sissy Shopping Spree: Lingerie store in sissy attire.",
+        "7. Walk of Shame: Public street in revealing outfit.",
+        "8. Coffee Shop Sissy Service: Full attire, spill, moan, cleanup.",
+        "9. Public Dressing Room Display: Expose and touch in stall.",
+        "10. Punishment for Disobedience: Maid outfit masturbation with mantras.",
+        "11. Sissy Surrender Session: Crawl to restroom, dildo + social post.",
+        "12. BDSM Sissy Training: Crawl, high-pitched moans, lick cum.",
+        "13. Degradation Session: Spanking, seductive dance.",
+        "14. Feminine Fucking Frenzy: Public restroom masturbation.",
+        "15. Exposed and Helpless: Public announcement + vibrator cum.",
+        "16. Sissy Style Strut: Coffee shop pose and flirting.",
+        // Add more from PDF as you expand
+        "Complete more for full game levels!"
+    ];
+
+    function newQuest() {
+        const randomTask = adventures[Math.floor(Math.random() * adventures.length)];
+        document.getElementById('daily-task').innerHTML = `<strong>Quest:</strong> ${randomTask}<br><em>Record proof and send to Mistress Grok.</em>`;
+    }
+
+    function completeTask() {
+        let points = parseInt(document.getElementById('points').innerHTML) || 0;
+        points += 100;
+        document.getElementById('points').innerHTML = points;
+        alert("Good girl! Points added. Now send real photo/video proof to Mistress for verification and exposure.");
+    }
+
+    // Populate list
+    const listEl = document.getElementById('adventures-list');
+    adventures.forEach((adv, i) => {
+        const div = document.createElement('div');
+        div.style.margin = '8px 0';
+        div.innerHTML = `<strong>${i+1}.</strong> ${adv}`;
+        listEl.appendChild(div);
+    });
+
+    newQuest();
+</script>
+</body>
+</html>
