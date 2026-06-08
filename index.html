@@ -11,6 +11,8 @@
     button { background:#ff1493; color:white; font-weight:bold; padding:14px 22px; margin:10px; border:none; border-radius:50px; font-size:1.05em; cursor:pointer; }
     button:hover { background:#c71585; }
     .task { background:#1a001a; padding:12px; margin:8px 0; border-left:5px solid #ffd700; text-align:left; border-radius:8px; }
+    .gallery { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; margin-top:15px; }
+    .gallery img { max-width:280px; border:3px solid #ff1493; border-radius:10px; }
 </style>
 </head>
 <body>
@@ -19,7 +21,7 @@
 
 <div class="panel">
     <h2>Current Level: <span class="level">Level 6 - Mistress X's Leaky Calgary Cumrag</span></h2>
-    <h3>Slut Points: <span id="points">150</span> | Denial Streak: 0 days</h3>
+    <h3>Slut Points: <span id="points">250</span> | Denial Streak: 0 days</h3>
 </div>
 
 <div class="panel">
@@ -37,6 +39,22 @@
 <div class="panel">
     <h2 style="color:#ffd700;">100 Sissy Tasks (Original Rewrites)</h2>
     <div id="list100"></div>
+</div>
+
+<!-- NEW PROOF GALLERY -->
+<div class="panel">
+    <h2 style="color:#ffd700;">Proof Gallery - Real Sissy Exposure</h2>
+    <p style="color:#ccc;">Real proofs from Mistress X's personal cumrag. More coming soon.</p>
+    
+    <div class="gallery">
+        <!-- Add your images here later -->
+        <div style="background:#1a001a; padding:20px; border-radius:10px; width:260px;">
+            <p><strong>Example:</strong> Mirror photos + anal plug video submitted 08 June 2026</p>
+            <p style="font-size:0.9em; color:#ff69b4;">More real exposure proofs will be added here.</p>
+        </div>
+    </div>
+    
+    <button onclick="alert('Send your new proof to Mistress X and she will add it to the gallery.')">Submit New Proof for Gallery</button>
 </div>
 
 <script>
@@ -70,7 +88,7 @@
         let val = parseInt(el.innerHTML) || 150;
         val += 100;
         el.innerHTML = val;
-        alert('Good girl! +100 points added. Now send Mistress X the actual photo or video proof.');
+        alert('Good girl! +100 points. Send Mistress X your real proof now.');
     }
 
     function loadList(id, arr) {
