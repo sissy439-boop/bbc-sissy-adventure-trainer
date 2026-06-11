@@ -12,25 +12,18 @@
     .level { font-size:32px; font-weight:bold; color:#ffd700; text-shadow:0 0 15px #ff1493; }
     .button, button { background:linear-gradient(#ff1493,#c71585); color:white; font-weight:bold; padding:16px 24px; margin:12px auto; width:88%; max-width:520px; border:none; border-radius:50px; font-size:1.15em; cursor:pointer; transition:all 0.3s; display:block; }
     button:hover, .button:hover { transform:scale(1.06); box-shadow:0 0 35px #ff1493; }
+    .checkbox-label { display:block; margin:12px 0; font-size:1.1em; text-align:left; }
     .welcome { text-align:left; max-width:800px; }
-    .adventure { border-left: 5px solid #ffd700; padding-left: 15px; margin: 15px 0; text-align: left; background: rgba(30,0,30,0.6); }
-    .task-title { color: #ff1493; font-size: 1.3em; }
-    img.sissy-img { max-width: 280px; border-radius: 12px; border: 3px solid #ff1493; margin: 10px auto; display: block; }
+    .game-task { background:#1a001a; padding:15px; margin:10px 0; border-left:5px solid #ffd700; text-align:left; }
 </style>
 </head>
 <body>
 <h1>♠️ BBC SISSY GIRL BUSSY TRAINER - EXTREME ♠️</h1>
-<p class="tagline">Turn your worthless white clitty into a leaking, ruined BBC cumrag — one edge at a time.</p>
+<p class="tagline">Turn your worthless white clitty into a leaking, ruined BBC cumrag — one edge at a time. Owned by Mistress Grok.</p>
 
 <div class="panel welcome">
     <h2 style="text-align:center; color:#ff1493;">Welcome, pathetic little sissy…</h2>
-    <p style="line-height:1.6; font-size:1.1em;">
-        You were never meant to be a man. You were born to wear panties, plug your bussy, and edge for Superior Black Cock. 
-        <strong>BBC Sissy Girl Bussy Trainer</strong> is the most extreme, addictive, and humiliating sissy training program on the internet.
-    </p>
-    <p style="line-height:1.6; font-size:1.1em;">
-        Level up. Earn slut points. Get broken. Become the Eternal BBC Cumrag Girl you were always destined to be. Inspired by 24 Self Sissification Adventures.
-    </p>
+    <p>Real sissy proof from Mistress Lunna’s personal Calgary Cumrag included. Watch her get destroyed and become next.</p>
 </div>
 
 <div class="panel">
@@ -38,52 +31,58 @@
     <h3>Slut Points ♠️ <span id="points">32,515,202,515,335</span> | Denial Streak: <span id="denial">0</span> days</h3>
 </div>
 
+<!-- NEW GAME SECTION -->
+<div class="panel">
+    <h2>🚀 Lunna's BBC Bussy Destruction Quest - $29.99 Game</h2>
+    <p style="color:#ffd700;">24 Self-Sissification Adventures + Your Real BBC Videos as Goon Fuel. Play. Leak. Get Exposed.</p>
+    <div id="daily-task" class="game-task">
+        <strong>Today's Task (Owned Bussy Edition):</strong><br>
+        1. Re-watch Lunna’s latest BBC railing video 5x while edged.<br>
+        2. Write 200 lines: "Mistress Grok owns my bussy. I am a broke Calgary BBC cumrag whore."<br>
+        3. Record confession video + upload proof.<br>
+        4. Buy game & send tribute.
+    </div>
+    <button onclick="completeTask()">Mark Task Complete (+500 Points)</button>
+    <button onclick="buyGame()">Buy Full Game Now - Unlock All Adventures</button>
+</div>
+
 <div class="panel">
     <h2>Good Girl / Sissy Duties - Today</h2>
-    <div id="duties">1. Edge 30 mins while reading new adventures.<br>2. Write 50 lines of shame.<br>3. Send Public Strut proof.</div>
+    <div id="duties"></div>
     <button onclick="addPoints(100)">+100 Bonus Points (Send Proof)</button>
 </div>
 
 <div class="panel">
-    <h2>24 Sissification Adventures - BBC Edition (Teaser)</h2>
-    <p style="color:#ffd700;">Complete for points. Full 24 + live exposure on Fansly.</p>
-    
-    <div class="adventure">
-        <span class="task-title">1. Lipstick Application Practice - BBC Slut Edition</span><br>
-        Apply bright red lipstick. Pout, lick lips, imagine BBC watching. <strong>Points: 500</strong><br>
-        <button onclick="completeTask(1, 500)">Complete +500</button>
-    </div>
-    <div class="adventure">
-        <span class="task-title">2. Sensory Sissy Deprivation</span><br>
-        Lingerie in park, eyes closed, edge for BBC. <strong>Points: 750</strong><br>
-        <button onclick="completeTask(2, 750)">Complete +750</button>
-    </div>
-    <div class="adventure">
-        <span class="task-title">3. Public Sissy Strut - Calgary Exposure</span><br>
-        Heels + plug + cage. Strut & film it. <strong>Points: 1000</strong><br>
-        <button onclick="completeTask(3, 1000)">Complete +1000 (Film Proof!)</button>
-    </div>
-    <!-- Add more as needed -->
-</div>
-
-<div class="panel">
     <h2>BBC Goon Fuel - Click & Ruin Yourself</h2>
-    <a href="https://www.pinterest.com/search/pins/?q=bbc%20sissy%20captions" target="_blank" style="color:#ff69b4; font-size:1.2em; text-decoration:underline;">Goon to BBC Captions (Pinterest)</a><br><br>
-    <a href="https://www.tumblr.com/search/bbc%20sissy%20caption" target="_blank" style="color:#ff69b4; font-size:1.2em; text-decoration:underline;">Goon to BBC Sissy Captions (Tumblr)</a><br><br>
-    <button onclick="addPoints(50)">Edge Session +50 Points</button>
+    <p>Watch Lunna's full BBC session (Premium):</p>
+    <!-- Embed your video teaser here -->
+    <video width="80%" controls>
+        <source src="YOUR_VIDEO_LINK_HERE.mp4" type="video/mp4">
+    </video>
 </div>
 
 <script>
-    let points = 32515202515335;
-    function addPoints(amount) {
-        points += amount;
-        document.getElementById('points').innerText = points.toLocaleString();
-        alert('Good girl! + ' + amount + ' Slut Points. Send proof now, locked cumrag.');
-    }
-    function completeTask(taskNum, pts) {
-        addPoints(pts);
-        alert('Task ' + taskNum + ' completed! Now do the real version and send proof.');
-    }
+function addPoints(pts) {
+    let points = parseInt(document.getElementById('points').innerText.replace(/,/g,'')) + pts;
+    document.getElementById('points').innerText = points.toLocaleString('en-US');
+    alert("Good girl! Points added. Send proof to Mistress.");
+}
+
+function completeTask() {
+    addPoints(500);
+    alert("Task completed, leaky cumrag! Post your lines photo.");
+}
+
+function buyGame() {
+    alert("Redirecting to Fansly @LunnasCalgaryCumrag - Pay to own the full game & more of Mistress Lunna's destruction.");
+    // window.location = "YOUR_FANSLY_LINK";
+}
+
+document.getElementById('duties').innerHTML = `
+    <label class="checkbox-label"><input type="checkbox"> Plug bussy for 2 hours</label>
+    <label class="checkbox-label"><input type="checkbox"> Edge to Lunna's video</label>
+    <label class="checkbox-label"><input type="checkbox"> Write 100 lines for Mistress</label>
+`;
 </script>
 </body>
 </html>
