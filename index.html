@@ -74,6 +74,23 @@
 let points = 32515202515335;
 let level = 6;
 
+    let lockStart = null;
+function startLock() {
+  // Prompt for duration + proof upload simulation
+  lockStart = Date.now();
+  localStorage.setItem('lockStart', lockStart);
+  addPoints(500);
+  updateLockDisplay();
+}
+
+function updateLockDisplay() {
+  if (!lockStart) return;
+  const days = Math.floor((Date.now() - lockStart) / 86400000);
+  document.getElementById('lock-days').textContent = days;
+  document.getElementById('multiplier').textContent = (1 + days * 0.1).toFixed(1) + 'x';
+  // Add confetti on milestones
+}
+
 function addPoints(pts) {
     points += pts;
     document.getElementById('points').textContent = points.toLocaleString();
