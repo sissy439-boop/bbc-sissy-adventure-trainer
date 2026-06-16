@@ -51,6 +51,11 @@ const adventures = [
   // ... (I shortened for response - full 24 below in your copy)
   {num:24, title:"Sissy Slave Auction Exposure", desc:"Post on Fansly/X as Mistress X's personal Calgary cumrag. Live auction yourself.", points:2000}
 ]
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+<stripe-buy-button
+  buy-button-id="YOUR_BUY_BUTTON_ID_FROM_STRIPE"
+  publishable-key="pk_live_XXXXXXXXXXXXXXXX">
+</stripe-buy-button>
 
 function renderAdventures() {
   let html = '';
@@ -70,8 +75,6 @@ function addPoints(pts) {
   document.getElementById('points').innerText = points.toLocaleString();
   localStorage.setItem('sissyPoints', points);
 }
-
-renderAdventures();
 
 // Daily random
 const daily = adventures[Math.floor(Math.random()*adventures.length)];
